@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.XYChart?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.ed.ed.ResultWindowController">
+
+    <padding>
+        <javafx.geometry.Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+
+    <Label text="Model 1" style="-fx-font-weight: bold;"/>
+    <GridPane hgap="10" vgap="5">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="50"/>
+        </columnConstraints>
+
+        <Label text="Trafność:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="trafnosc1" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Czułość:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="czulosc1" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Swoistość:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="swoistosc1" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Precyzja:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label fx:id="precyzja1" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="F1:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Label fx:id="f11" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Auc:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <Label fx:id="auc" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Label text="Model 2" style="-fx-font-weight: bold;"/>
+    <GridPane hgap="10" vgap="5">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="50"/>
+        </columnConstraints>
+
+        <Label text="Trafność:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="trafnosc2" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Czułość:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="czulosc2" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Swoistość:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="swoistosc2" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Precyzja:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label fx:id="precyzja2" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="F1:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Label fx:id="f12" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Auc:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <Label fx:id="auc2" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    </GridPane>
+
+
+    <LineChart fx:id="rocChart" title="Krzywe ROC" animated="false"
+               createSymbols="false" prefHeight="400" prefWidth="600">
+        <xAxis>
+            <NumberAxis label="Specyficzność"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Czułość"/>
+        </yAxis>
+    </LineChart>
+
+</VBox>
